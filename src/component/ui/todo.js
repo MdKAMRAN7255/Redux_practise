@@ -7,8 +7,6 @@ function Todo() {
     const [inputData, setInputData] = useState('');
     // Getting existing index
     const [editIndex, setEditIndex] = useState();
-    // Getting existing data
-    const [editTodoData, setEditTodoData] = useState();
 
     const [editBtn, setEditBtn] = useState(false);
     
@@ -49,7 +47,7 @@ function Todo() {
         <div className='container'>
             <div className='row g-0'>
                 <div className='col-12 d-flex justify-content-center pt-5'>
-                    <input type='text' placeholder='' value={inputData || " "} onChange={(e) => setInputData(e.target.value)} />
+                    <input type='text' placeholder='' value={ inputData ||""} onChange={(e) => setInputData(e.target.value)} />
                     {
                        editBtn?
                        <button type='button' className='btn btn-success' onClick={() => {UpdateData(editIndex)}}>Update</button>
@@ -73,7 +71,7 @@ function Todo() {
                                         checked={data.completed}
                                     />
                                     <button className='btn btn-success ms-2' 
-                                        onClick={()=> {EditListData(data.id); setEditTodoData(data.todo)}}>Edit</button>
+                                        onClick={()=> {EditListData(data.id); setInputData(data.todo)}}>Edit</button>
                                     <button className='ms-2 btn btn-danger' 
                                         type='button' onClick={() => dispatch(deleteTodo(data.id))}>
                                         Delete
