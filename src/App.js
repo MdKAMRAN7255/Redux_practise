@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+// import ClickCounter from './Component/renderProps/clickCounter';
+// import Counter from './Component/renderProps/counter';
+// import HoverCounter from './Component/renderProps/hoverCounter';
+import ClickCounter from './Component/hoc/clickIncrement';
+import HoverIncrement from './Component/hoc/hoverIncrement';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <ClickCounter 
+        name="MD Kamran"/>
+
+      <HoverIncrement 
+        name="Shadab Ali"/>
+
+      <hr />
+
+      {/* <Counter 
+        render={(count, countIncrement) => 
+        <ClickCounter count={count} countIncrement={countIncrement} /> 
+        } />
+
+      <Counter 
+        render= {(count, countIncrement) => 
+        <HoverCounter count={count} countIncrement={countIncrement} />
+        } /> */}
     </div>
   );
 }
