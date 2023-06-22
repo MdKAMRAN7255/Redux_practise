@@ -4,18 +4,20 @@ import './App.css';
 // import HoverCounter from './Component/renderProps/hoverCounter';
 import ClickCounter from './Component/hoc/clickIncrement';
 import HoverIncrement from './Component/hoc/hoverIncrement';
+import DeleteList from './Component/questionPracise/deleteList';
+import Checkbox1 from './Component/questionPracise/state&city';
 
 function App() {
   return (
     <div className="App">
       
-      <ClickCounter 
+      {/* <ClickCounter 
         name="MD Kamran"/>
 
       <HoverIncrement 
         name="Shadab Ali"/>
 
-      <hr />
+      <hr /> */}
 
       {/* <Counter 
         render={(count, countIncrement) => 
@@ -26,6 +28,10 @@ function App() {
         render= {(count, countIncrement) => 
         <HoverCounter count={count} countIncrement={countIncrement} />
         } /> */}
+        
+        <Checkbox1 />
+        <DeleteList />
+        
     </div>
   );
 }
